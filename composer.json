@@ -1,16 +1,18 @@
 {
-    "name" : "test/test",
-    "description" : "test",
+    "name" : "sugarcrm/sugarcrm",
+    "description" : "SugarCRM",
     "type" : "project",
     "license" : "proprietary",
-    "homepage" : "http://www.example.com",
+    "homepage" : "http://www.sugarcrm.com",
     "support": {
-        "wiki" : "http://www.example.com",
+        "wiki" : "http://support.sugarcrm.com",
+        "forum": "https://community.sugarcrm.com/sugarcrm",
+        "irc": "irc://irc.freenode.org/sugarcrm"
     },
     "config" : {
         "vendor-dir" : "vendor",
         "prepend-autoloader" : false,
-        "autoloader-suffix" : "test",
+        "autoloader-suffix" : "Sugar",
         "notify-on-install" : false,
         "discard-changes" : true,
         "preferred-install" : "dist",
@@ -24,16 +26,16 @@
             "Zend_": "vendor"
         },
         "psr-4": {
-            "test\\test\\": [
+            "Sugarcrm\\Sugarcrm\\": [
                 "src/",
                 ""
             ],
-            "test\\test\\custom\\": [
+            "Sugarcrm\\Sugarcrm\\custom\\": [
                 "custom/src/",
                 "custom/"
             ],
-            "test\\test\\inc\\": "include/",
-            "test\\test\\custom\\inc\\": "custom/include/"
+            "Sugarcrm\\Sugarcrm\\inc\\": "include/",
+            "Sugarcrm\\Sugarcrm\\custom\\inc\\": "custom/include/"
         },
         "classmap": [
             "api/",
@@ -77,16 +79,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "tests\\tests\\": [
+            "Sugarcrm\\SugarcrmTests\\": [
                 "tests/{old}/src/",
                 "tests/{old}"
             ],
-            "tests\\tests\\inc\\": "tests/{old}/include/",
-            "tests\\tests\\": [
+            "Sugarcrm\\SugarcrmTests\\inc\\": "tests/{old}/include/",
+            "Sugarcrm\\SugarcrmTestsUnit\\": [
                 "tests/unit-php/src/",
                 "tests/unit-php/"
             ],
-            "tests\\tests\\inc\\": "tests/unit-php/include/"
+            "Sugarcrm\\SugarcrmTestsUnit\\inc\\": "tests/unit-php/include/"
         }
     },
     "require": {
@@ -111,6 +113,7 @@
         "monolog/monolog": "1.22.0",
         "tedivm/jshrink": "v1.1.0",
         "vanderlee/php-stable-sort-functions": "2.0.2",
+        "sugarcrm/identity-provider": "1.0.2",
         "psr/container": "^1.0",
         "ext-openssl": "*",
         "php": ">=5.6.0"
@@ -129,7 +132,7 @@
         },
         {
             "type": "composer",
-            "url": "https://www.example.com"
+            "url": "https://satis.sugardev.team"
         }
     ]
 }
